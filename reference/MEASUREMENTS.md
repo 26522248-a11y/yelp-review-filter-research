@@ -99,8 +99,8 @@ Stable across sessions. Victim review left at original text, 5 stars.
 | Re-read sessions after 90 s | 3/3 DataDome 403 |
 | Profile posts before re-read | ~6–7 in ~1 h |
 
-N is the recommended count (cross-checked against a business with a known split). The A/B result (N vs N+1) was
-not captured before the profiles were flagged.
+N is the public/recommended count (the NR bucket is excluded from the header count). The A/B result (N vs N+1)
+was not captured before the profiles were flagged.
 
 ## Other surfaces
 
