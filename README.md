@@ -36,8 +36,7 @@ can rewrite any review if it knows the encid (and encids are public in share URL
 4. `reference/METHOD.md` — how each finding was reached, including dead ends.
 5. `reference/PITFALLS.md` — 25 failure modes, symptom → cause → fix. Read before running anything.
 6. `reference/MEASUREMENTS.md`, `reference/SCHEMA.md`, `reference/DATADOME.md`.
-7. `vps-harness/` — the original credential-pipeline repo, **byte-for-byte unchanged**, for the login/hCaptcha
-   mechanics this work builds on.
+7. `vps-harness/` — the original credential-pipeline repo, **byte-for-byte unchanged** (plus this repo's `runner/flow.js`), for the login/hCaptcha mechanics this work builds on.
 
 ## Files
 
