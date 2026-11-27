@@ -16,5 +16,6 @@ resolvable while the reviews exist.
 | `race.txt` | dedupe under 5 concurrent posts |
 | `schema-whitelist.txt` | 5-field input types |
 | `oracle-count.txt` | `/biz_photos` header count (recommended count) |
+| `report-idor.md` | full IDOR report: impact, root cause, fix, severity rationale, failed 9+ escalations |
 
 Accounts: A = `duatravelsuk@gmail.com`, B = `wisejayc@gmail.com`. Both controlled.

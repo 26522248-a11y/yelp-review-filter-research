@@ -152,9 +152,11 @@ reference/PITFALLS.md       27 traps; read before running
 reference/MEASUREMENTS.md   numbers and live review inventory
 reference/SCHEMA.md         operations, docIds, inputs
 reference/DATADOME.md       edge map
+reference/RAW-NOTES.md      earlier working notes, verbatim
+reference/AGENT-BRIEF.md    subagent brief
 testpace/http/              curl matrices
 testpace/probes/            jobs, notes, sample text
-evidence/                   transcribed PoC responses
+evidence/                   transcribed PoC responses + full IDOR report
 vps-harness/                original repo, unchanged (login/hCaptcha background)
 ```
 

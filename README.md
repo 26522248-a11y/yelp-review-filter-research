@@ -52,9 +52,12 @@ reference/PITFALLS.md       failure catalogue
 reference/MEASUREMENTS.md   rates, counts, session outcomes
 reference/SCHEMA.md         GraphQL operations, documentIds, input types, errors
 reference/DATADOME.md       edge map and bypass rationale
+reference/RAW-NOTES.md      earlier working notes, verbatim (superseded by FINDINGS, kept for detail)
+reference/AGENT-BRIEF.md    the one-page brief handed to the parallel subagent
 testpace/http/              reproducible curl matrices
 testpace/probes/            single-purpose probe notes and jobs
 evidence/                   transcribed request/response proof (logs were ephemeral)
+evidence/report-idor.md     full IDOR report with severity rationale
 vps-harness/                original repo, untouched: README, SKILL, PERF, BANDWIDTH, reference, runner, testpace, examples
 ```
 
