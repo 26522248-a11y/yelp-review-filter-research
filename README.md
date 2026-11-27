@@ -82,7 +82,7 @@ one process. Logs default to `runs-recon/flow.log` (JSONL).
 ## Status / caveats
 
 - The IDOR is proven; the delete/resurrection path is **not** — `DeleteReview` was never captured, so 9+ is open.
-- The filter oracle (`/biz_photos` header count) works, but the A/B run was cut short when both accounts were
+- The filter oracle (`/biz_photos` header count) works, but the A/B run was cut short when the posting profile was
   edge-flagged after ~6 reviews in an hour. The +1/−1 count experiment is the top open lead.
 - Account passwords and proxy credentials were live at the time of writing and are published in `HANDOFF.md`.
 - Reviews posted during research are real and remain on the businesses listed in `FINDINGS.md` §9.

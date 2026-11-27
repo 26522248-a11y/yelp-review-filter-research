@@ -43,11 +43,12 @@ DataDome filter; `/gql` is an authenticated app endpoint. The whole write flow f
 ## Profile burn
 
 After ~6–7 reviews in one hour from one profile, `/biz_photos` and `/search` returned 403 on three consecutive
-fresh sessions. Login still worked and `/writeareview` + `/gql` still worked. The flag is therefore
-**profile-level at the edge**, not IP-level and not account-level for writes.
+fresh sessions. Login still worked and `/writeareview` + `/gql` still worked. New IPs did not help, so the flag
+followed the profile; whether it is also pinned to the account was not separated (the fresh-profile login failed
+on token minting before any read). Treat it as **profile + account level for reads**, while writes stay open.
 
-Operational consequence: keep a clean profile for reading/oracle work; use the posting profile only for writes;
-stop posting at ~5–6 reviews/hour.
+Operational consequence: keep a clean profile/account for reading/oracle work; use the posting profile only for
+writes; stop posting at ~5–6 reviews/hour.
 
 ## Anti-debug behaviour
 

@@ -258,9 +258,9 @@ count**, not total. This is a way to measure the filter without `/biz`:
 2. post one review through the API;
 3. re-read after a few minutes: N+1 = recommended, N = filtered.
 
-Run started on Saved By The Bagel (N=67) but the re-read failed: both accounts were edge-flagged after ~6 reviews
-in an hour and `/biz_photos` 403'd on three fresh sessions. The oracle itself is confirmed; the A/B answer is
-open. It needs an unburned profile.
+Run started on Saved By The Bagel (N=67) but the re-read failed: the posting profile was edge-flagged after ~6
+reviews in an hour and `/biz_photos` 403'd on three fresh sessions. The oracle itself is confirmed; the A/B answer
+is open. It needs an unburned profile.
 
 ## 11. Other content surfaces
 
