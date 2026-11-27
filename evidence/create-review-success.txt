@@ -1,0 +1,13 @@
+# CreateReview success (UI completion path)
+# Run: 2026-11-26, account A, business Sixty Vines, composer filled via CDP, native form submit.
+# Transcribed from flow.log records e=post_click / e=gql_body / e=after_post.
+
+{"e":"post_click","post":"clicked:false"}
+{"e":"gql_body","b":"[{\"data\":{\"createReview\":{\"__typename\":\"CreateReviewSuccess\",\"review\":{\"encid\":\"NcQCfVbQt3TZxskE7Cuo6A\",\"__typename\":\"Review\"}}}}]"}
+{"e":"after_post","t":"Thanks for your review!","txt":"Your review of Sixty Vines is now live …"}
+
+# Same response shape observed for:
+#   Z9YD1            CcPwJQwNYa5HJdlsUVtqOw
+#   Culinary Dropout H5y-zJtKJs0QkQxA5wgOgQ
+#   Saved By The Bagel 09773aYTIbSk12Zt2sHnnQ
+# No hCaptcha widget was rendered on /writeareview/biz/<encid> in any run.

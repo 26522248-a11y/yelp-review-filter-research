@@ -1,0 +1,15 @@
+# Filter oracle — /biz_photos header
+# Run: 2026-11-27, account A, logged-in profile, business cQdLIIzsExv9LF3s4s7Hzw (Saved By The Bagel).
+
+GET /biz_photos/cQdLIIzsExv9LF3s4s7Hzw
+
+# Rendered header text (body.innerText, normalised):
+"4.5 (67 reviews)  Saved By The Bagel  …"
+
+# 67 is the recommended count, not the total. After posting review 09773a… the re-read
+# was attempted three times on fresh sessions:
+#   attempt 1: 403 DataDome
+#   attempt 2: 403 DataDome
+#   attempt 3: 403 DataDome
+# Cause: profile edge-flagged after ~6 reviews in one hour, not an IP problem.
+# The N → N+1 check is therefore still open; method is sound, profile was not clean.

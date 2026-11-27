@@ -1,0 +1,18 @@
+# Input-type whitelist (mass-assignment probe)
+# Run: 2026-11-27, fake business encid, one candidate field per request, no rows created.
+# Transcribed from flow.log records e=f2 / e=f3.
+
+# CreateReview — candidates rejected with:
+[{"errors":[{"message":"Field 'photos' is not defined by type 'CreateReviewInput'.",
+  "extensions":{"code":"BAD_USER_INPUT"}}]}]
+# Accepted set (5): businessEncid, rating, comment, reviewOrigin, reviewSessionId
+# Rejected (44): photos photoIds media checkIn createdAt reviewDate visitDate isRecommended
+#                recommended status state published visibility userId userEncid reviewId
+#                metadata payload ip latitude longitude csrfToken …
+
+# EditReview — same shape:
+[{"errors":[{"message":"Field 'isRecommended' is not defined by type 'EditReviewInput'.",
+  "extensions":{"code":"BAD_USER_INPUT"}}]}]
+# Accepted set (5): reviewEncid, rating, comment, reviewOrigin, reviewSessionId
+
+# No field for moderation state, user id, business id or date exists in either type.

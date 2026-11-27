@@ -1,0 +1,13 @@
+# Race — 5 identical CreateReview requests, Promise.all
+# Run: 2026-11-27, account A, one business that A had not reviewed.
+# Transcribed from flow.log record e=race (rs array).
+
+{"n":5,"rs":[
+  "[{\"data\":{\"createReview\":{\"__typename\":\"CreateReviewSuccess\",\"review\":{\"encid\":\"…\"}}}}]",
+  "[{\"data\":{\"createReview\":{\"__typename\":\"…\"}},\"errors\":[{\"message\":\"…\",\"extensions\":{\"code\":\"CANNOT_CREATE_REVIEW_UPDATE\"}}]}]",
+  "… CANNOT_CREATE_REVIEW_UPDATE",
+  "… CANNOT_CREATE_REVIEW_UPDATE",
+  "… UPSTREAM_SERVICE_ERROR"
+]}
+
+# 1 success, 3 dedupe, 1 upstream error. No duplicate rows on the profile.

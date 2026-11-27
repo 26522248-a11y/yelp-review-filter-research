@@ -1,0 +1,12 @@
+# Redacted evidence. One JSON object per line, lifecycle events plus one record per credential.
+{"event":"start","n":4,"sess":"f0z48211","mode":"fast","pace":0,"lanePace":0,"budget":250,"lanes":["www.yelp.com"],"path":"/login/%6E%65%77%61%6A%61%78"}
+{"event":"bw","noMedia":true,"blockUrls":41,"cacheMB":64}
+{"event":"ddok","ddok":true}
+{"event":"hydrated","lane":"www.yelp.com","ok":true}
+{"event":"widget","lane":"www.yelp.com","armed":"site:0"}
+{"event":"csrf","lane":"www.yelp.com","len":36}
+{"i":1,"email":"alice@example.com","pass":"Sunset2019!","lane":"www.yelp.com","status":200,"success":true,"validated":false,"unable":false,"link":false,"closed":false,"tokLen":1874,"tokMs":1180,"postMs":902,"body":"{\"errors\":[],\"error_fields\":[],\"success\":true,\"return_url\":\"https://www.yelp.com/\"}","profileStatus":200,"zss":1,"zssLen":30,"ms":2082}
+{"i":2,"email":"bob@example.com","pass":"P@55word","lane":"www.yelp.com","status":200,"success":false,"validated":true,"unable":false,"link":false,"closed":false,"tokLen":1901,"tokMs":1044,"postMs":831,"body":"{\"errors\":[\"The email address or password you entered is incorrect.\"],\"error_fields\":[\"email\",\"password\"],\"success\":false}","profileStatus":null,"zss":0,"zssLen":0,"ms":1875}
+{"i":3,"email":"carol@example.com","pass":"KEYSj4n7myeLP4Y","lane":"www.yelp.com","status":200,"success":false,"validated":false,"unable":false,"link":false,"closed":true,"tokLen":1888,"tokMs":1002,"postMs":864,"body":"{\"errors\":[\"This account has been closed.\"],\"success\":false}","profileStatus":null,"zss":0,"zssLen":0,"ms":1866}
+{"i":4,"email":"dave@example.com","pass":"Parsifal1.","lane":"www.yelp.com","status":200,"success":false,"validated":false,"unable":true,"link":false,"closed":false,"tokLen":1893,"tokMs":1077,"postMs":855,"body":"{\"errors\":[\"We're unable to log you in right now.\"]}","profileStatus":null,"zss":0,"zssLen":0,"ms":1932}
+{"event":"summary","mode":"fast","processed":4,"posted":4,"validated":1,"success":1,"unable":1,"link":0,"closed":1,"unknown":0,"r429":0,"r403":0,"r407":0,"tokFail":0,"blocked":false,"paceSleepMs":0,"avgTokMs":1076,"avgPostMs":863,"avgMs":1939,"bytes":582000,"mb":0.6,"bytesPerPost":145500,"secs":19,"successes":[{"email":"alice@example.com","pass":"Sunset2019!","lane":"www.yelp.com","profileStatus":200,"zss":[{"d":".yelp.com","len":30}]}],"path":"/login/%6E%65%77%61%6A%61%78","paceRate":0,"budget":250,"reloads":0,"unresolved":0,"lanes":[{"host":"www.yelp.com","ready":true,"dead":false,"posted":4,"r429":0,"tokFail":0}]}

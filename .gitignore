@@ -1,0 +1,6 @@
+profiles/
+runs/
+*.log
+!evidence/*.log
+node_modules/
+_scratch/
